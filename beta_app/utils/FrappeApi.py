@@ -3,7 +3,7 @@ import requests
 import json
 headersList = {
                 "Accept": "*/*",
-                "User-Agent": "Khanal Tech",
+                "User-Agent": "",
                 "Content-Type": "application/json" 
             }
 
