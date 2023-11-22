@@ -10,13 +10,6 @@ headersList = {
 
 
 #%%
-import requests
-#%%
-headersList = {
-                "Accept": "*/*",
-                "User-Agent": "Khanal Tech",
-                "Content-Type": "application/json" 
-            }
 
 # def Fetch_Data(num_books=20, **kwargs):
 #     url = "https://frappe.io/api/method/frappe-library"
@@ -63,7 +56,6 @@ headersList = {
 # %%
 # Fetch_Books(title="Harry Potter", total_books=20)
 
-# %%
 
 
 
@@ -140,17 +132,17 @@ def issue_book(data):
     print(type(user.money_to_pay))
 
     if book.status == "available" and int(user.money_to_pay) <= 500:
-        # Update Book status to "issued"
+        
         book.status = "issued"
         book.save()
-        newvalue = int(user.money_to_pay)  # Convert the current money_to_pay to an integer
+        newvalue = int(user.money_to_pay)  
         print(newvalue, 'newvalue')
 
-        fees = int(data_dict['fees'])  # Convert the fees from the data_dict to an integer
-        newvalue += fees  # Add the fees to newvalue
+        fees = int(data_dict['fees'])  
+        newvalue += fees  
         print(newvalue, 'newvalue')
 
-        user.money_to_pay = str(newvalue)  # Convert the updated value back to string before assigning it
+        user.money_to_pay = str(newvalue)  
         print(user.money_to_pay, 'user')
 
         user.save()
@@ -183,21 +175,19 @@ def return_book(data):
     book.save()
     Transcation.paid=1
     Transcation.save()
-    # Calculate rent fee and update outstanding debt
-    # rent_fee = calculate_rent_fee(transaction)
-    newvalue = int(user.money_to_pay)  # Convert the current money_to_pay to an integer
+  
+    newvalue = int(user.money_to_pay) 
     print(newvalue, 'newvalue')
 
-    fees = int(data_dict['fees'])  # Convert the fees from the data_dict to an integer
-    newvalue -= fees  # Add the fees to newvalue
+    fees = int(data_dict['fees'])  
+    newvalue -= fees  
     print(newvalue, 'newvalue')
 
-    user.money_to_pay = str(newvalue)  # Convert the updated value back to string before assigning it
+    user.money_to_pay = str(newvalue)  
     print(user.money_to_pay, 'user')
     user.save()
     frappe.db.commit()
 
-    # Delete the Transaction record
-    # frappe.delete_doc("Transaction", data_dict['Transcation'])
+    
 
     return f"Book returned successfully. Rent fee: Rs. {data_dict['fees']}"
