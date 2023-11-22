@@ -1,0 +1,134 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:book_name",
+ "creation": "2023-11-21 11:52:08.054441",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "book_name",
+  "book_id",
+  "authors",
+  "average_rating",
+  "language",
+  "publication_date",
+  "column_break_38o7c",
+  "publisher",
+  "text_reviews_count",
+  "ratings_count",
+  "num_pages",
+  "isbn",
+  "isbn13",
+  "status"
+ ],
+ "fields": [
+  {
+   "fieldname": "book_name",
+   "fieldtype": "Data",
+   "in_filter": 1,
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Book Name",
+   "unique": 1
+  },
+  {
+   "fieldname": "book_id",
+   "fieldtype": "Data",
+   "label": "Book ID",
+   "unique": 1
+  },
+  {
+   "fieldname": "authors",
+   "fieldtype": "Data",
+   "label": "Authors"
+  },
+  {
+   "fieldname": "average_rating",
+   "fieldtype": "Data",
+   "label": "Average Rating"
+  },
+  {
+   "fieldname": "language",
+   "fieldtype": "Data",
+   "label": "Language"
+  },
+  {
+   "fieldname": "publication_date",
+   "fieldtype": "Data",
+   "label": "Publication Date"
+  },
+  {
+   "fieldname": "publisher",
+   "fieldtype": "Data",
+   "label": "Publisher"
+  },
+  {
+   "fieldname": "text_reviews_count",
+   "fieldtype": "Data",
+   "label": "Text Reviews Count"
+  },
+  {
+   "fieldname": "ratings_count",
+   "fieldtype": "Data",
+   "label": "Ratings Count"
+  },
+  {
+   "fieldname": "num_pages",
+   "fieldtype": "Data",
+   "label": "Num Pages"
+  },
+  {
+   "fieldname": "isbn",
+   "fieldtype": "Data",
+   "label": "isbn"
+  },
+  {
+   "fieldname": "isbn13",
+   "fieldtype": "Data",
+   "label": "isbn13"
+  },
+  {
+   "fieldname": "column_break_38o7c",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "available\nissued"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-11-22 15:36:02.084754",
+ "modified_by": "Administrator",
+ "module": "Beta Application",
+ "name": "Books",
+ "name_case": "Title Case",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
+}
